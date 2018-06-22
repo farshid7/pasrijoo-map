@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<org.osmdroid.views.MapView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapviewosm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"/>
+
+    <ImageButton
+        android:visibility="gone"
+
+        android:id="@+id/corrent_location"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right|top"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_corrent_location"
+        android:padding="4dp"
+        />
+    <LinearLayout
+        android:visibility="gone"
+
+        android:id="@+id/zoom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="8dp"
+
+
+        >
+        <ImageButton
+            android:id="@+id/map_zoom_in"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/ic_zoom_in"
+            android:padding="4dp"
+            />
+        <ImageButton
+            android:id="@+id/map_zoom_out"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/ic_zoom_out"
+            android:padding="4dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="farshid00sadeghi@gmail.com"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="8dp"
+        android:textColor="#2a000000"
+        />
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true" />
+
+</FrameLayout>
