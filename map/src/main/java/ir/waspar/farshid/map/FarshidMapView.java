@@ -370,7 +370,7 @@ public class FarshidMapView extends RelativeLayout implements LocationManeger.On
     }
 
     public void getAddress(double x, double y, final OnAddressReceive onAddressReceive) {
-        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, "https://developers.parsijoo.ir/web-service/v1/map/?type=address&x="+String.valueOf(x)+"&y="+String.valueOf(y), null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET, "https://developers.parsijoo.ir/web-service/v1/map/?type=address&x="+String.valueOf(x)+"&y="+String.valueOf(y), new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
@@ -447,7 +447,7 @@ public class FarshidMapView extends RelativeLayout implements LocationManeger.On
                         JsonObject resultObj = rootObj.getAsJsonObject("result");
                         int resultNumber = resultObj.get("resultNumber").getAsInt();
                         JsonArray itemsJsonArray = resultObj.getAsJsonArray("items");
-                        ArrayList<HashMap<String, String>> itemsArray = new ArrayList<HashMap<String, String>>();
+                        ArrayList<HashMap<String, String>> itemsArray = new ArrayList<>();
                         for (int i = itemsJsonArray.size() - 1; i >= 0; i--) {
                             JsonElement itemJsonElement = itemsJsonArray.get(i);
                             JsonObject itemJsonObject = itemJsonElement.getAsJsonObject();
